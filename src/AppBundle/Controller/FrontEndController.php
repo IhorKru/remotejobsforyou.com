@@ -56,7 +56,7 @@ class FrontEndController extends Controller
                 $newSubscriber ->setAge($age);
                 $newSubscriber ->setGender(-1);
                 $newSubscriber ->setEducationLevelId(-1);
-                $newSubscriber ->setResourceId(5);
+                $newSubscriber ->setResourceId(6);
                 $newSubscriber ->setAgreeTerms($agreeterms);
                 $newSubscriber ->setAgreeEmails($agreeemails);
                 $newSubscriber ->setAgreePartners($agreepartners);
@@ -253,8 +253,8 @@ class FrontEndController extends Controller
             if($subscriber) {
                     $urlButton = $this->generateEmailUrl(($request->getLocale() === 'ru' ? '/ru/' : '/') . 'verify/unsubscribe/' . $subscriber->getEmailAddress() . '?id=' . urlencode($subscriber->getHash()));
                     $message = Swift_Message::newInstance()
-                        ->setSubject('FinSensitive | We are sorry you are leaving us')
-                        ->setFrom(array('relaxstcom@gmail.com' => 'FinSensitive Support Team'))
+                        ->setSubject('RemoteJobsForYou | We are sorry you are leaving us')
+                        ->setFrom(array('relaxstcom@gmail.com' => 'RemoteJobsForYou Support Team'))
                         ->setTo($subscriber->getEmailAddress())
                         ->setContentType("text/html")
                         ->setBody($this->renderView('FrontEnd/emailUnsubscribe.html.twig',[
@@ -294,7 +294,7 @@ class FrontEndController extends Controller
         ]);
     }
     
-        //controller specific functions
+    //controller specific functions
     
     private function generateKey($size) {
         $characters = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';

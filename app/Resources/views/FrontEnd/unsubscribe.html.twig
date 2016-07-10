@@ -42,13 +42,18 @@
                 <!-- subscription form -->
                 <div class="subscribe-form" style="text-align:center; position:absolute;top:35%;">
                     <div class= "row">
+                        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
                         <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
                             <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="Email address">
+                            {{ form_label(form.emailaddress) }}
+                            {{ form_widget(form.emailaddress) }}
                         </div>
                         <div style="padding-top:5%; padding-bottom:8%;">
-                            <button type="button" class="smoothScroll btn btn-danger sb-button" style="width: 224px; height: 42px;">Unsubscribe</button>
+                            {{ form_row(form.submit, { 'label': 'Unsubscribe' }) }}
                         </div>
+                        
+                        {{ form_end(form) }}
+
                     </div>
                 </div>
         </div>        

@@ -27,7 +27,8 @@ class UnsubscriberType extends AbstractType {
                ->add('submit', SubmitType::class, array(
                     'label' => 'Unsubscribe', 
                     'attr' => array(
-                        'class' => 'smoothScroll btn btn-danger sb-button'
+                        'class' => 'smoothScroll btn btn-danger sb-button',
+                        'style' => 'style="width: 224px; height: 42px;'
                     )))
                 ;
     }

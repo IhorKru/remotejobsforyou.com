@@ -27,57 +27,63 @@
     
 <section id="contact">
     <div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
-    <div id="contact-us" class="parallax">
-      <div class="container">
-        <div class="row">
-          <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>Contact Us</h2>
-            <p>Want to become a member but not sure how to proceed? Have a question related to a campaign or want to unsubscribe, contact us using form below for more help</p>
-          </div>
-        </div>
-        <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
-          <div class="row">
-            <div class="col-sm-6">
-              <form id="main-contact-form" name="contact-form" method="post" action="#">
-                <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+        <div id="contact-us" class="parallax">
+            <div class="container">
+                <div class="row">
+                    <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <h2>Contact Us</h2>
+                        <p>Want to become a member but not sure how to proceed? Have a question related to a campaign or want to unsubscribe, contact us using form below for more help</p>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input type="email" name="email" class="form-control" placeholder="Email Address" required="required">
+                </div>
+                <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                {{ form_start(form2, {'attr': {'novalidate': 'novalidate'}}) }}
+                                <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            {{ form_label(form2.name) }}
+                                            {{ form_widget(form2.name) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            {{ form_label(form2.emailaddress) }}
+                                            {{ form_widget(form2.emailaddress) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form2.subject) }}
+                                    {{ form_widget(form2.subject) }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form2.message) }}
+                                    {{ form_widget(form2.message) }}
+                                </div>                        
+                                <div class="form-group">
+                                    {{ form_row(form2.submit, { 'label': 'SEND US A MESSAGE' }) }}
+                                </div>
+                                {{ form_end(form2) }}
+                            </div>
+                        </div>    
+                        <div class="col-sm-6">
+                            <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                <p>Please note: due to constantly increasing subscriber base and as a result number of queries that are coming though out support center, potential delays in response may occur. We apologize for any inconvenience cause.</p>
+                                <ul class="address">
+                                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> 2400 South Avenue A </li>
+                                  <li><i class="fa fa-phone"></i> <span> Phone:</span> +928 336 2000  </li>
+                                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:support@remotejobsforyou.com"> support@remotejobsforyou.com</a></li>
+                                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.remotejobsforyou.com</a></li>
+                                </ul>
+                            </div>                            
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="form-group">
-                  <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
-                </div>
-                <div class="form-group">
-                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your message" required="required"></textarea>
-                </div>                        
-                <div class="form-group">
-                  <button type="submit" class="btn-submit">Send Now</button>
-                </div>
-              </form>   
             </div>
-            <div class="col-sm-6">
-              <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <p>Please note: due to constantly increasing subscriber base and as a result number of queries that are coming though out support center, potential delays in response may occur. We apologize for any inconvenience cause.</p>
-                <ul class="address">
-                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> 2400 South Avenue A </li>
-                  <li><i class="fa fa-phone"></i> <span> Phone:</span> +928 336 2000  </li>
-                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:support@remotejobsforyou.com"> support@remotejobsforyou.com</a></li>
-                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.remotejobsforyou.com</a></li>
-                </ul>
-              </div>                            
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>        
-  </section><!--/#contact-->   
+        </div>        
+    </section><!--/#contact-->   
         
         
     {% block javascripts %}

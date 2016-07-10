@@ -23,7 +23,8 @@ class SubscriberType extends AbstractType {
                 'error_bubbling' => true,
                 'attr' => array(
                     'placeholder' => 'First Name',
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'style' => 'color:white;'
                 )])
             ->add('lastname', TextType::class, [
                 'label' => false,
@@ -31,7 +32,8 @@ class SubscriberType extends AbstractType {
                 'error_bubbling' => true,
                 'attr' => array(
                     'placeholder' => 'Last Name',
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'style' => 'color:white;'
                 )])
             ->add('emailaddress', EmailType::class, [
                 'label' => false,
@@ -40,7 +42,8 @@ class SubscriberType extends AbstractType {
                 'attr' => [
                     'placeholder' => 'Email Address',
                     'pattern'     => '.{2,}',//minlength
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'style' => 'color:white;'
                     ]])  
             ->add('phone', TextType::class, [
                 'label' => false,
@@ -49,7 +52,8 @@ class SubscriberType extends AbstractType {
                 'attr' => [
                     'placeholder' => 'Mobile Phone',
                     'pattern'     => '.{2,}', //minlength
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'style' => 'color:white;'
                     ]])
             ->add('age', TextType::class, [
                 'label' => false,
@@ -57,7 +61,8 @@ class SubscriberType extends AbstractType {
                 'error_bubbling' => true,
                 'attr' => [
                     'placeholder' => 'Age',
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'style' => 'color:white;'
                     ]])
             ->add('agreeterms', CheckboxType::class, ['label' => '','required' => true])
             ->add('agreeemails', CheckboxType::class, ['label' => '','required' => true])
@@ -66,7 +71,7 @@ class SubscriberType extends AbstractType {
                 'label' => 'Sign Up',
                 'attr' => [
                     'class' => 'smoothScroll btn btn-danger sb-button',
-                    'style' => 'margin-bottom:2em;'
+                    'style' => 'margin-bottom:2em; width: 224px; height: 42px;'
                     ]
         ])
              ;

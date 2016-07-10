@@ -53,7 +53,7 @@ class ContactType extends AbstractType {
             ->add('submit', SubmitType::class, [
                 'label' => 'Send Message',
                 'attr' => array(
-                    'class' => 'btn btn-default submit-btn form_submit'
+                    'class' => 'btn-submit'
                 )])
              ;
     }
