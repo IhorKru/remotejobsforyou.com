@@ -17,14 +17,14 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">                 
                     <li class="scroll"><a href="{{ path('index') }}" onclick = $("#menu-close").click(); >Home</a></li>
-                    <li class="scroll"><a href="#about-us" onclick = $("#menu-close").click(); >About Us</a></li>                   
-                    <li class="scroll"><a href="#services" onclick = $("#menu-close").click(); >Service</a></li> 
-                    <li class="scroll"><a href="#portfolio" onclick = $("#menu-close").click(); >Why Us</a></li>
-                    <li class="scroll"><a href="#blog" onclick = $("#menu-close").click(); >Blog</a></li>
+                    <li class="scroll"><a href="{{ path('index') }}#about-us" onclick = $("#menu-close").click(); >About Us</a></li>                   
+                    <li class="scroll"><a href="{{ path('index') }}#services" onclick = $("#menu-close").click(); >Service</a></li> 
+                    <li class="scroll"><a href="{{ path('index') }}#portfolio" onclick = $("#menu-close").click(); >Why Us</a></li>
+                    <li class="scroll"><a href="{{ path('index') }}#blog" onclick = $("#menu-close").click(); >Blog</a></li>
                     <li class="scroll"><a href="{{ path('terms') }}" onclick = $("#menu-close").click(); >Terms</a></li>
                     <li class="scroll"><a href="{{ path('privacy') }}" onclick = $("#menu-close").click(); >Privacy Policy</a></li>
                     <li class="scroll active"><a href="{{ path('unsubscribe') }}" onclick = $("#menu-close").click(); >Unsubscribe</a></li>
-                    <li class="scroll"><a href="#contact" onclick = $("#menu-close").click(); >Contact</a></li>        
+                    <li class="scroll"><a href="#contact-terms" onclick = $("#menu-close").click(); >Contact</a></li>        
                 </ul>
             </div>
         </div>	  
