@@ -1120,3 +1120,15 @@ ul.address {
     -webkit-border-radius: 4px;
     behavior: url(border-radius.htc);
 }
+
+.slideone {
+    background: url(../images/slider/1.jpg);
+}
+
+.slidetwo {
+    background: url(../images/slider/2.jpg);
+}
+
+.slidethree {
+    background: url(../images/slider/3.jpg);
+}
