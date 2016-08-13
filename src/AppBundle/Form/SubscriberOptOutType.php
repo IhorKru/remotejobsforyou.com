@@ -7,7 +7,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class UnsubscriberType extends AbstractType {
+class SubscriberOptOutType extends AbstractType {
 
     /**
      * @param FormBuilderInterface $builder
@@ -18,19 +18,17 @@ class UnsubscriberType extends AbstractType {
                ->add('emailaddress', EmailType::class, [
                     'label' => false,
                     'required' => true,
-                    'attr' => array(
+                    'attr' => [
                         'placeholder' => 'Email Address',
-                        'pattern'     => '.{2,}', //minlength
+                        'pattern' => '.{2,}', //minlength
                         'class' => 'form-control',
                         'style' => 'height:41px'
-                    )])
-               ->add('submit', SubmitType::class, array(
+                        ]])
+               ->add('submit', SubmitType::class, [
                     'label' => 'Unsubscribe', 
-                    'attr' => array(
+                    'attr' => [
                         'class' => 'smoothScroll btn btn-danger sb-button',
-                        'style' => 'style="width: 224px; height: 42px;'
-                    )))
-                ;
+                        'style' => 'style="width: 224px; height: 42px;']]);
     }
 
     /**
@@ -38,7 +36,7 @@ class UnsubscriberType extends AbstractType {
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver) {
          $resolver->setDefaults(array(
-               'data_class' => 'AppBundle\Entity\Unsubscriber'
+               'data_class' => 'AppBundle\Entity\SubscriberOptOutDetails'
            ));
     }
 
