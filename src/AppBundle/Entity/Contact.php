@@ -1,9 +1,6 @@
 <?php
-
 namespace AppBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Contact
  *
@@ -20,36 +17,30 @@ class Contact
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=100)
      */
     private $name;
-
     /**
      * @var string
      *
      * @ORM\Column(name="emailaddress", type="string", length=100)
      */
     private $emailaddress;
-
     /**
      * @var string
      *
      * @ORM\Column(name="subject", type="string", length=100)
      */
     private $subject;
-
     /**
      * @var string
      *
      * @ORM\Column(name="message", type="string", length=255)
      */
     private $message;
-
-
     /**
      * Get id
      *
@@ -59,7 +50,6 @@ class Contact
     {
         return $this->id;
     }
-
     /**
      * Set name
      *
@@ -70,10 +60,8 @@ class Contact
     public function setName($name)
     {
         $this->name = $name;
-
         return $this;
     }
-
     /**
      * Get name
      *
@@ -83,7 +71,6 @@ class Contact
     {
         return $this->name;
     }
-
     /**
      * Set emailaddress
      *
@@ -94,10 +81,8 @@ class Contact
     public function setEmailaddress($emailaddress)
     {
         $this->emailaddress = $emailaddress;
-
         return $this;
     }
-
     /**
      * Get emailaddress
      *
@@ -107,7 +92,6 @@ class Contact
     {
         return $this->emailaddress;
     }
-
     /**
      * Set subject
      *
@@ -118,10 +102,8 @@ class Contact
     public function setSubject($subject)
     {
         $this->subject = $subject;
-
         return $this;
     }
-
     /**
      * Get subject
      *
@@ -131,7 +113,6 @@ class Contact
     {
         return $this->subject;
     }
-
     /**
      * Set message
      *
@@ -142,10 +123,8 @@ class Contact
     public function setMessage($message)
     {
         $this->message = $message;
-
         return $this;
     }
-
     /**
      * Get message
      *
@@ -156,4 +135,3 @@ class Contact
         return $this->message;
     }
 }
-
