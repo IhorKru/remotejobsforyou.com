@@ -13,7 +13,6 @@ use AppBundle\Entity\SubscriberOptInDetails;
 use AppBundle\Entity\SubscriberOptOutDetails;
 use AppBundle\Entity\Contact;
 use AppBundle\Form\SubscriberType;
-use AppBundle\Form\SubscriberOptInType;
 use AppBundle\Form\SubscriberOptOutType;
 use AppBundle\Form\ContactType;
 use Swift_Message;
