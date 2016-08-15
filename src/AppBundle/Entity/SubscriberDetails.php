@@ -95,7 +95,13 @@ class SubscriberDetails
      */
     private $hash;
 
-
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="sourceid", type="smallint")
+     */
+    private $sourceid;
+    
     /**
      * Get id
      *
@@ -306,6 +312,30 @@ class SubscriberDetails
     public function setOptindetails(ArrayCollection $optindetails)
     {
         $this->optindetails = $optindetails;
+    }
+    
+    /**
+     * Set sourceid
+     *
+     * @param integer $sourceid
+     *
+     * @return SubscriberDetails
+     */
+    public function setSourceid($sourceid)
+    {
+        $this->sourceid = $sourceid;
+
+        return $this;
+    }
+
+    /**
+     * Get sourceid
+     *
+     * @return integer
+     */
+    public function getSourceid()
+    {
+        return $this->sourceid;
     }
 }
 
