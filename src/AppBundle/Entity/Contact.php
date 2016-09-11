@@ -51,6 +51,20 @@ class Contact
 
 
     /**
+     * Set id
+     *
+     * @param integer $id
+     *
+     * @return Contact
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+    
+    /**
      * Get id
      *
      * @return int
@@ -155,5 +169,5 @@ class Contact
     {
         return $this->message;
     }
-}
 
+}
