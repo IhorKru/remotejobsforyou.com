@@ -45,16 +45,14 @@ class ContactType extends AbstractType {
             ->add('message', TextType::class, ['label' => false,
                 'required' => true,
                 'error_bubbling' => true,
-                'attr' => array(
+                'attr' => [
                     'class' => 'form-control input-lg',
                     'placeholder' => 'Message',
                     'style' => 'height: 10em;'
-                )])
+                    ]])
             ->add('submit', SubmitType::class, [
                 'label' => 'Send Message',
-                'attr' => array(
-                    'class' => 'btn-submit'
-                )])
+                'attr' => ['class' => 'btn-submit']])
              ;
     }
     
@@ -62,9 +60,7 @@ class ContactType extends AbstractType {
     * @param OptionsResolverInterface $resolver
     */
     public function configureOptions(OptionsResolver $resolver) {
-        $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Contact'
-        ));
+        $resolver->setDefaults(['data_class' => 'AppBundle\Entity\Contact']);
     }
     /**
      * @return string
